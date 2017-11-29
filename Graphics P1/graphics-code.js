@@ -8,14 +8,14 @@ var phongShader = new Shader("phong_vertex_shader", "phong_fragment_shader");
 registerShape('ground',[0.3,0.3,0.3]);
 registerShape('launcher_source',[1,1,1]);
 registerShape('test1',[1,1,1]);
-registerShape('test2',[1,1,1]);
-registerShape('test3',[1,1,1]);
-registerShape('test4',[1,1,1]);
-registerShape('test5',[1,1,1]);
-registerShape('test6',[1,1,1]);
-registerShape('test7',[1,1,1]);
-registerShape('test8',[1,1,1]);
-registerShape('test9',[1,1,1]);
+//registerShape('test2',[1,1,1]);
+//registerShape('test3',[1,1,1]);
+//registerShape('test4',[1,1,1]);
+//registerShape('test5',[1,1,1]);
+//registerShape('test6',[1,1,1]);
+//registerShape('test7',[1,1,1]);
+//registerShape('test8',[1,1,1]);
+//registerShape('test9',[1,1,1]);
 //registerShape('test10',[1,1,1]);
 //registerShape('test11',[1,1,1]);
 //registerShape('test12',[1,1,1]);
@@ -161,18 +161,19 @@ function drawAllShapes(mdv, shader_program, shader_1, shader_2, arg1, arg2, arg3
                 }
                 
                 drawinCube.SetColor(shape.color);
-               if(i > 10)
-               {
-                drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
-               }
-               else if (i == 0 || i == 1)
-               {               
-                drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
-               }
-               else
-               {
-                drawingShape.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);
-               }
+            //   if(i > 10)
+            //   {
+            //    drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
+            //   }
+            //   else if (i == 0 || i == 1)
+            //   {               
+            //    drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
+            //   }
+            //   else
+            //   {
+            //    drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
+            //   }
+               drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4)
                
             }
         }
