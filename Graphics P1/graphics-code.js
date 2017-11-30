@@ -127,7 +127,10 @@ function drawAllShapes(mdv, shader_program, shader_1, shader_2, arg1, arg2, arg3
 
                 mat4.fromRotationTranslation(m, o, c);
                 mat4.multiply(m, mdv, m);
-                mat4.scale(m, m, [shape.oimo.shapes.width, shape.oimo.shapes.height, shape.oimo.shapes.depth]);
+                if (shape.oimo.shapes.type === 2)
+                {
+                    mat4.scale(m, m, [shape.oimo.shapes.width, shape.oimo.shapes.height, shape.oimo.shapes.depth]);                    
+                }
                 gl.uniformMatrix4fv(shader_program.modelview_matrix_handle, false, m);
 
 
@@ -161,19 +164,19 @@ function drawAllShapes(mdv, shader_program, shader_1, shader_2, arg1, arg2, arg3
                 }
                 
                 drawinCube.SetColor(shape.color);
-            //   if(i > 10)
-            //   {
-            //    drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
-            //   }
-            //   else if (i == 0 || i == 1)
-            //   {               
-            //    drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
-            //   }
-            //   else
-            //   {
-            //    drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
-            //   }
-               drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4)
+               if(i > 13)
+               {
+                drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
+               }
+               else if (i == 0 || i == 1)
+               {               
+                drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
+               }
+               else
+               {
+                drawingShape.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
+               }
+               //drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4)
                
             }
         }

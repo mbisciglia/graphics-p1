@@ -21,26 +21,28 @@ document.addEventListener('keydown',function(e){
             launchProjectile();
             break;
         case 65: // "A key"
-                document.getElementById('slider-azimuth').value = (Number(document.getElementById('slider-azimuth').value) - 0.5);
+                document.getElementById('slider-azimuth').value = (Number(document.getElementById('slider-azimuth').value) - 1);
                 updateSlider(azi_slider.value, 'azimuth');
                 break;
         case 68: // "D key"
-            document.getElementById("slider-azimuth").value = (Number(document.getElementById("slider-azimuth").value) + .5);
+            document.getElementById("slider-azimuth").value = (Number(document.getElementById("slider-azimuth").value) + 1);
             updateSlider(azi_slider.value, 'azimuth');
             break;
         case 87: // "W key"
-            document.getElementById("slider-elevation").value = (Number(document.getElementById("slider-elevation").value) + .5);
+            document.getElementById("slider-elevation").value = (Number(document.getElementById("slider-elevation").value) + 1);
             updateSlider(ele_slider.value, 'elevation');
             break;
         case 83: // "S key"
-            document.getElementById("slider-elevation").value = (Number(document.getElementById("slider-elevation").value) - .5);
+            document.getElementById("slider-elevation").value = (Number(document.getElementById("slider-elevation").value) - 1);
             updateSlider(ele_slider.value, 'elevation');
             break;
          case 189: // "- key"
+         case 173: // "- key FF"
             document.getElementById("slider-power").value = (Number(document.getElementById("slider-power").value) - 2);
             updateSlider(pow_slider.value, 'power');
             break;
         case 187: // "+ key"
+        case 61: // "+ key FF"
             document.getElementById("slider-power").value = (Number(document.getElementById("slider-power").value) + 2);
             updateSlider(pow_slider.value, 'power');
             break;
