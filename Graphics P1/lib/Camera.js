@@ -29,7 +29,7 @@ var camera = {
 	start:{
 		x:-35,
 		y:20,
-		z:5
+		z:25
 	},
 	rotation: null
 }

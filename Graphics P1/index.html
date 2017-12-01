@@ -11,7 +11,7 @@
 			.container {
 				position: relative;
 				display:flex;flex-direction:column;
-				align-items:center;
+				align-items:left;
 				width:90%;
 				margin:32px auto;
 			}
@@ -47,6 +47,9 @@
 			}
 			.row > * + *{
 				margin-left:8px;
+			}
+			.rowx > * + *{
+				margin-left:0px;
 			}
 
 
@@ -103,22 +106,42 @@
 			</canvas>
 
 			<div id="sliders">
-				<div class="row">
+				<div class="rowx">
 					<span>Power</span>
 					<div class="slidercontainer">
-						<input type="range" class="slider" min="1" max="40" step="1" value="20" id="slider-power" oninput="updateSlider(this.value,'power')" onchange="updateSlider(this.value,'power')"></input>						
+						<input type="range" class="slider" min="0" max="40" step="1" value="20" id="slider-power" oninput="updateSlider(this.value,'power')" onchange="updateSlider(this.value,'power')"></input>						
 						<span id="val-power">20</span>						
 					</div>
 				</div>
-				<div class="row">
+				<div class="rowx">
 					<span>Elevation</span>
-					<input type="range" min="-10" max="10" step="1" value="0" id="slider-elevation" oninput="updateSlider(this.value,'elevation')" onchange="updateSlider(this.value,'elevation')"></input>
+					<div class ="slidercontainer"></div>
+					<input type="range" class="slider" min="-10" max="10" step="1" value="0" id="slider-elevation" oninput="updateSlider(this.value,'elevation')" onchange="updateSlider(this.value,'elevation')"></input>
 					<span id="val-elevation">0</span>
 				</div>
-				<div class="row">
+				<div class="rowx">
 					<span>Azimuth</span>
-					<input type="range" min="-20" max="20" step="1" value="0" id="slider-azimuth" oninput="updateSlider(this.value,'azimuth')" onchange="updateSlider(this.value,'azimuth')"></input>
+					<div class ="slidercontainer"></div>
+					<input type="range" class ="slider" min="-20" max="20" step="1" value="0" id="slider-azimuth" oninput="updateSlider(this.value,'azimuth')" onchange="updateSlider(this.value,'azimuth')"></input>
 					<span id="val-azimuth">0</span>
+				</div>
+				<div class="rowx">
+					<span>Power of Chain</span>
+					<div class="slidercontainer">
+					<input type="range" class="slider" min="0" max="40" step="1" value="20" id="slider-chain-power" oninput="updateSlider(this.value,'power of chain')" onchange="updateSlider(this.value,'power of chain')"></input>						
+					<span id="val-chain-power">20</span>						
+				</div>
+				<div class="rowx">
+					<span>Azimuth of Chain</span>
+					<div class ="slidercontainer"></div>
+					<input type="range" class ="slider" min="-20" max="20" step="1" value="0" id="slider-chain-azimuth" oninput="updateSlider(this.value,'azimuth of chain')" onchange="updateSlider(this.value,'azimuth of chain')"></input>
+					<span id="val-chain-azimuth">0</span>
+				</div>
+				<div class="rowx">
+					<span>Elevation of Chain</span>
+					<div class ="slidercontainer"></div>
+					<input type="range" class ="slider" min="-20" max="20" step="1" value="0" id="slider-chain-elevation" oninput="updateSlider(this.value,'elevation of chain')" onchange="updateSlider(this.value,'elevation of chain')"></input>
+					<span id="val-chain-elevation">0</span>
 				</div>
 			</div>
 		</div>

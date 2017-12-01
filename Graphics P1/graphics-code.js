@@ -174,7 +174,7 @@ function drawAllShapes(mdv, shader_program, shader_1, shader_2, arg1, arg2, arg3
                }
                else
                {
-                drawingShape.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
+                drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4);   
                }
                //drawinCube.Draw(shader_1, shader_2, arg1, arg2, arg3, arg4)
                
